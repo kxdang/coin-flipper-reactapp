@@ -21,9 +21,9 @@ export default class CoinFlipper extends Component {
     this.setState(currState => ({
       currCoin: (currState.currCoin = coins[rand]),
       numHead:
-        coins[rand] == "head" ? currState.numHead + 1 : currState.numHead + 0,
+        coins[rand] === "head" ? currState.numHead + 1 : currState.numHead + 0,
       numTail:
-        coins[rand] == "tail" ? currState.numTail + 1 : currState.numTail + 0,
+        coins[rand] === "tail" ? currState.numTail + 1 : currState.numTail + 0,
       numFlips: currState.numFlips + 1
     }));
   }
